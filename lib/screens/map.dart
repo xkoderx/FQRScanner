@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:qiuerr/models/scan_model.dart';
 
-class Mapa extends StatefulWidget {
+class Map extends StatefulWidget {
   @override
-  _MapaState createState() => _MapaState();
+  _MapState createState() => _MapState();
 }
 
-class _MapaState extends State<Mapa> {
+class _MapState extends State<Map> {
   final Completer<GoogleMapController> _controller = Completer();
   MapType mapType = MapType.normal;
 
