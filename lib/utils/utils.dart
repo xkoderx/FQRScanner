@@ -5,8 +5,8 @@ import 'package:url_launcher/url_launcher_string.dart';
 Future launchUrl(BuildContext context, ScanModel scan) async {
   final url = scan.valor;
   if (scan.tipo == 'http') {
-    if (!await launchUrlString(url)) {
-      throw 'Could not launch $url';
+    if (await launchUrlString(url)) {
+      await launchUrlString(url);
     } else {
       throw 'couldnt launch $url';
     }
